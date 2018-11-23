@@ -1,0 +1,90 @@
+/* =-=-= Pour l'ensemble des objets de la page =-=-= */
+
+/* import de la police de caractère du titre de la page */
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+* {
+	/* pour maîtriser width et flex-basis */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	/* On active flex sur le corps de la page */
+	display: flex;
+	/* correction bug IE de min-height non appliqué à body */
+	flex-direction: column;
+}
+
+
+
+/* =-=-= Pour le corps =-=-= */
+body {
+	/* crée un contexte flex pour ses enfants */
+	/* On active flex sur le corps de la page */
+	display: flex;
+	/* affichage vertical */
+	/* disposition verticale : le header d'abord (car en premier dans l'html), puis les autres éléments en dessous */
+	flex-direction: column;
+	/* toute la hauteur du viewport */
+	/* si le contenu (1 seul article par exemple) est plus petit que l'écran, le body est fixé à la taille de l'écran */
+	min-height: 100vh;
+	/* pas de marge */
+	margin: 0;
+	/* couleur pour le fond de la page */
+	background-color: #efe6dd;
+	/* couleur par défaut du texte de la page */
+	color: #181818;
+	/* police par défaut du texte de la page */
+	font-family: 'Calibri', sans-serif;
+}
+
+/* =-=-= Pour le titre =-=-= */
+header {
+	/* couleur pour le fond du titre */
+	background-color: #1abc9c;
+	/* couleur du titre */
+	color: #ecf0f1;
+	/* marge intérieur du titre */
+	padding: 1em;
+	/* crée un contexte flex pour ses enfants */
+	/* de nouveau on active flex pour le menu et les articles */
+	display: flex;
+	/* occupe la hauteur restante */
+	flex: 1 1 auto;
+	/* disposition vertical : le logo et le titre au dessus du sous-titre */
+	flex-direction: column;
+	/* les items sont répartis de manière égale sur la ligne ; le premier est au début de la ligne, le dernier est à la fin */
+/* 	justify-content: space-between; */
+}
+
+header>a {
+	/* lien sans decoration */
+	text-decoration: none;
+	color: #eee;
+}
+
+/* le logo directement enfant de header */
+header>a #branding {
+	/* pas de marge */
+	margin: 0;
+	/* On active flex sur le corps de la page */
+	display: flex;
+	/* disposition horizontale */
+	flex-direction: row;
+	/* on positionne en  bas */
+	align-items: flex-end;
+}
+
+header>a #branding h1 {
+	margin-left: 0.5em;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2.5em;
+}
+
+/* le titre h2 directement enfant de header */
+header>h2 {
+	margin-top: 0.25em;
+	font-size: 1.5em;
+}

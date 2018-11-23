@@ -14,6 +14,16 @@
   <!-- <link rel="stylesheet" title="reset" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css" /> -->
   <!-- Déclaration des ressources externes : CSS -->
   <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" /> -->
+
+  <!-- concatenate and minify for production -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/my_style.css" />
+
+  <!-- <link rel="stylesheet" href="./css/html5reset-1.6.1.css" /> -->
+  
+  <!-- <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" /> -->
+
   <!-- Description du site pour moteur de recherche -->
   <meta name="description" content="Saise de frais kilométriques des trajets domicile travail à vélo" />
   <meta name="keywords" content="code, académie, MAIF, HTML, CSS, JavaScriptn, frais, vélo, domicile, travail" />
@@ -23,59 +33,58 @@
 
   <!-- Bandeau d'entête de la page - Début déclaration-->
   <header>
-    <a href="/">
-      <div id="logo">
-        <img src="./img/logo.png" alt="Logo Déclarations indémnités kilométriques" />
-        <h2><span class="highlight">MAIF</span> :: Déclarations indémnités kilométriques</h2>
-      </div>
-    </a>
+    <h1><span class="highlight">MAIF</span> :: Déclarations indémnités kilométriques</h1>
+    <img src="./img/logo.png" alt="Logo Déclarations indémnités kilométriques" />
     <nav>
       <ul>
-        <li>Connexion</li>
-        <li>Inscription</li>
+        <li><a href="#">Connexion</a></li>
+        <li><a href="#">Inscription</a></li>
       </ul>
     </nav>
   </header>
   <!-- Bandeau d'entête de la page - Fin déclaration-->
 
-  <!-- Menu de navigation - Début déclaration -->
-  <!-- <nav>
-    <h2>Menu</h2>
-    <ul>
-      <li>Accueil</li>
-      <li><a href="actu.html">Actu</a></li>
-      <li><a href="a_propos.html">A propos</a></li>
-      <li><a href="contact.html">Nous contactez</a></li>
-    </ul>
-  </nav> -->
-  <!-- Menu de navigation - Fin déclaration -->
-
   <!-- Zone principale - Début déclaration -->
   <main>
-    <h3>Saisie des frais kilométriques des trajets à vélo dommicile travail</h3>
-    <section>
-      <article>
-        <h4>Contenu</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu nisi turpis. Phasellus congue auctor
-          dignissim. Suspendisse viverra lorem nec nisi elementum, volutpat tincidunt tortor bibendum. Nullam
-          scelerisque
-          faucibus tellus, ut efficitur purus pharetra vitae.</p>
-      </article>
-    </section>
+    <h2>Service de suivi des trajets dommicile-travail à vélo</h2>
+    <article>
+      <section>
+        <img src="./img/xxx.png" alt="XXX" />
+        <h3>Saisie simplifiée de vos trajets</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </section>
+      <section>
+        <img src="./img/yyy.png" alt="YYY" />
+        <h3>Accès mobile simple</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </section>
+      <section>
+        <img src="./img/zzz.png" alt="ZZZ" />
+        <h3>Suivi de votre activité 2 roues</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </section>
+    </article>
   </main>
   <!-- Zone principale - Fin déclaration -->
 
   <!-- Zone A côtés - Début déclaration -->
   <aside>
-    <h1>À propos de Code Académie</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu nisi turpis. Phasellus congue auctor
-      dignissim. Suspendisse viverra lorem nec nisi elementum, volutpat tincidunt tortor bibendum. Nullam scelerisque
-      faucibus tellus, ut efficitur purus pharetra vitae.</p>
+    <h2>À propos de Code Académie</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu nisi turpis. Phasellus congue auctor
+        dignissim. Suspendisse viverra lorem nec nisi elementum, volutpat tincidunt tortor bibendum. Nullam scelerisque
+        faucibus tellus, ut efficitur purus pharetra vitae.</p>
   </aside>
   <!-- Zone A côtés - Fin déclaration -->
 
   <!-- Pied de page - Début déclaration -->
   <footer>
+    <nav>
+      <ul>
+        <li><a href="#">A propos</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">CGU</a></li>
+      </ul>
+    </nav>
     <small>Copyright &copy; <time datetime="2018">2018</time> by <a href="mailto:bertrand.delion@free.fr">B. Delion</a></small>
   </footer>
   <!-- Pied de page - Fin déclaration -->
