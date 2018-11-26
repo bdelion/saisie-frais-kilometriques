@@ -31,9 +31,10 @@ body {
 	/* si le contenu (1 seul article par exemple) est plus petit que l'écran, le body est fixé à la taille de l'écran */
 	min-height: 100vh;
 	/* pas de marge */
-	margin: 0;
+	padding:0;
+	margin:0;
 	/* couleur pour le fond de la page */
-	background-color: #efe6dd;
+	background-color: #f4f4f4;
 	/* couleur par défaut du texte de la page */
 	color: #181818;
 	/* police par défaut du texte de la page */
@@ -43,9 +44,9 @@ body {
 /* =-=-= Pour le titre =-=-= */
 header {
 	/* couleur pour le fond du titre */
-	background-color: #1abc9c;
+	background:#35424a;
 	/* couleur du titre */
-	color: #ecf0f1;
+	color: #ffffff;
 	/* marge intérieur du titre */
 	padding: 1em;
 	/* crée un contexte flex pour ses enfants */
@@ -56,13 +57,16 @@ header {
 	/* disposition vertical : le logo et le titre au dessus du sous-titre */
 	flex-direction: column;
 	/* les items sont répartis de manière égale sur la ligne ; le premier est au début de la ligne, le dernier est à la fin */
-/* 	justify-content: space-between; */
+justify-content: space-between;
+	/* ligne séparatrice/soulignement du bas du titre */
+	border-bottom:#e8491d 3px solid;
 }
 
-header>a {
+header > a {
 	/* lien sans decoration */
 	text-decoration: none;
-	color: #eee;
+	color: #ffffff;
+	text-transform: uppercase;
 }
 
 /* le logo directement enfant de header */
