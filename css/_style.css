@@ -1,94 +1,178 @@
 /* =-=-= Pour l'ensemble des objets de la page =-=-= */
 
-/* import de la police de caractère du titre de la page */
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
+/* import de la police de caractère du titre de la page */
+
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 * {
-	/* pour maîtriser width et flex-basis */
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    /* pour maîtriser width et flex-basis */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	/* On active flex sur le corps de la page */
-	display: flex;
-	/* correction bug IE de min-height non appliqué à body */
-	flex-direction: column;
+    /* On active flex sur le corps de la page */
+    display: flex;
+    /* correction bug IE de min-height non appliqué à body */
+    flex-direction: column;
 }
-
 
 
 /* =-=-= Pour le corps =-=-= */
+
 body {
-	/* crée un contexte flex pour ses enfants */
-	/* On active flex sur le corps de la page */
-	display: flex;
-	/* affichage vertical */
-	/* disposition verticale : le header d'abord (car en premier dans l'html), puis les autres éléments en dessous */
-	flex-direction: column;
-	/* toute la hauteur du viewport */
-	/* si le contenu (1 seul article par exemple) est plus petit que l'écran, le body est fixé à la taille de l'écran */
-	min-height: 100vh;
-	/* pas de marge */
-	padding:0;
-	margin:0;
-	/* couleur pour le fond de la page */
-	background-color: #f4f4f4;
-	/* couleur par défaut du texte de la page */
-	color: #181818;
-	/* police par défaut du texte de la page */
-	font-family: 'Calibri', sans-serif;
+    /* crée un contexte flex pour ses enfants */
+    /* On active flex sur le corps de la page */
+    display: flex;
+    /* affichage vertical */
+    /* disposition verticale : le header d'abord (car en premier dans l'html), puis les autres éléments en dessous */
+    flex-direction: column;
+    /* toute la hauteur du viewport */
+    /* si le contenu (1 seul article par exemple) est plus petit que l'écran, le body est fixé à la taille de l'écran */
+    min-height: 100vh;
+    /* pas de marge */
+    padding: 0;
+    margin: 0;
+    /* couleur pour le fond de la page */
+    background-color: #f4f4f4;
+    /* couleur par défaut du texte de la page */
+    color: #181818;
+    /* police par défaut du texte de la page */
+    font-family: 'Calibri', sans-serif;
 }
+
 
 /* =-=-= Pour le titre =-=-= */
+
 header {
-	/* couleur pour le fond du titre */
-	background:#35424a;
-	/* couleur du titre */
-	color: #ffffff;
-	/* marge intérieur du titre */
-	padding: 1em;
-	/* crée un contexte flex pour ses enfants */
-	/* de nouveau on active flex pour le menu et les articles */
-	display: flex;
-	/* occupe la hauteur restante */
-	flex: 1 1 auto;
-	/* disposition vertical : le logo et le titre au dessus du sous-titre */
-	flex-direction: column;
-	/* les items sont répartis de manière égale sur la ligne ; le premier est au début de la ligne, le dernier est à la fin */
-justify-content: space-between;
-	/* ligne séparatrice/soulignement du bas du titre */
-	border-bottom:#e8491d 3px solid;
+    /* couleur pour le fond du titre */
+    background: #35424a;
+    /* couleur du titre */
+    color: #ffffff;
+    /* marge intérieur du titre */
+    padding: 1em;
+    /* crée un contexte flex pour ses enfants */
+    /* de nouveau on active flex pour le menu et les articles */
+    display: flex;
+    /* occupe la hauteur restante */
+    flex: 1 1 auto;
+    /* disposition vertical : le logo et le titre au dessus du sous-titre */
+    flex-direction: column;
+    /* les items sont répartis de manière égale sur la ligne ; le premier est au début de la ligne, le dernier est à la fin */
+    justify-content: space-between;
+    /* ligne séparatrice/soulignement du bas du titre */
+    border-bottom: #e8491d 3px solid;
+    padding-top: 30px;
+    max-height: 20vh;
 }
 
-header > a {
-	/* lien sans decoration */
-	text-decoration: none;
-	color: #ffffff;
-	text-transform: uppercase;
+header>a {
+    /* lien sans decoration */
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
 }
+
 
 /* le logo directement enfant de header */
+
 header>a #branding {
-	/* pas de marge */
-	margin: 0;
-	/* On active flex sur le corps de la page */
-	display: flex;
-	/* disposition horizontale */
-	flex-direction: row;
-	/* on positionne en  bas */
-	align-items: flex-end;
+    /* pas de marge */
+    margin: 0;
+    /* On active flex sur le corps de la page */
+    display: flex;
+    /* disposition horizontale */
+    flex-direction: row;
+    /* on positionne en  bas */
+    align-items: flex-end;
 }
 
-header>a #branding h1 {
-	margin-left: 0.5em;
-	font-family: 'Kaushan Script', cursive;
-	font-size: 2.5em;
+h1 {
+    margin-left: 0.5em;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.5em;
 }
+
+
+/* TODO ?
+header>a #branding h1 {
+    margin-left: 0.5em;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.5em;
+}
+*/
+
 
 /* le titre h2 directement enfant de header */
+
 header>h2 {
-	margin-top: 0.25em;
-	font-size: 1.5em;
+    margin-top: 0.25em;
+    font-size: 1.5em;
+}
+
+
+/* =-=-= Pour le contenu principal =-=-= */
+
+main {
+    /* crée un contexte flex pour ses enfants */
+    /* de nouveau on active flex pour le menu et les articles */
+    display: flex;
+    /* flex-grow = 0 : chaque enfant occupe la place nécessaire */
+    /* flex-shrink = 0 : chaque enfant n'est pas rétrécit */
+    /* flex-basis = auto :  taille par défaut d'un élément avant que l'espace restant soit réparti. */
+    flex: 0 0 auto;
+    /* disposition horizontal : le menu à droite, puis les autres éléments en gauche (ordre de la page) */
+    flex-direction: column;
+    /*  les items sont étirés jusqu'à remplir le container (tout en respectant min-width/max-width) */
+    /* 	align-items: stretch; */
+    /*  l'item est placé au début de la ligne cross-start. */
+    align-items: flex-start;
+    /* les items sont répartis de manière égale sur la ligne ; le premier est au début de la ligne, le dernier est à la fin */
+    justify-content: space-between;
+}
+
+main>article {
+    /* marge intérieure */
+    padding: 1em;
+    /* La section des articles est aussi en flex */
+    display: flex;
+    /* flex-grow = 0 : chaque enfant occupe la place nécessaire */
+    /* flex-shrink = 1 : chaque enfant est rétrécit */
+    /* flex-basis = auto :  taille par défaut d'un élément avant que l'espace restant soit réparti. */
+    flex: 0 1 auto;
+    /* disposition verticale : les articles les uns en dessous des autres */
+    flex-direction: row;
+    /* éléments étirés dans l'espace disponible */
+    align-items: stretch;
+}
+
+
+/* =-=-= Pour les articles =-=-= */
+
+main>article section {
+    /* occupe la largeur restante */
+    flex: 1;
+    /* les articles sur fond blanc */
+    background-color: white;
+    /* marge entre articles */
+    margin-bottom: 1em;
+    /* marge intérieure */
+    padding: 1em;
+    /* bordure */
+    border: 2px solid #34495e;
+    /* bordure arrondie */
+    border-radius: 5px;
+    /* bordure avec ombre */
+    box-shadow: 10px 10px 5px 0px #656565;
+    /* le contenu (l'image flottante entre autres) ne dépasse pas le contenant */
+    overflow: auto;
+}
+
+
+/* pour le dernier article, pas de marge en bas */
+
+#contenu_principal>section article:last-child {
+    /* marge entre articles */
+    margin-bottom: 0em;
 }
