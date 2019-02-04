@@ -58,13 +58,12 @@ header {
     /* occupe la hauteur restante */
     flex: 1 1 auto;
     /* disposition vertical : le logo et le titre au dessus du sous-titre */
-    flex-direction: column;
+    flex-direction: row-reverse;
     /* les items sont répartis de manière égale sur la ligne ; le premier est au début de la ligne, le dernier est à la fin */
     justify-content: space-between;
     /* ligne séparatrice/soulignement du bas du titre */
     border-bottom: #e8491d 3px solid;
     padding-top: 30px;
-    max-height: 20vh;
 }
 
 header>a {
@@ -94,6 +93,15 @@ h1 {
     font-size: 2.5em;
 }
 
+header>img {
+    width: 70px;
+    height: 70px;
+}
+
+header>ul ul>li {
+    flex-direction: row;
+}
+
 
 /* TODO ?
 header>a #branding h1 {
@@ -106,10 +114,13 @@ header>a #branding h1 {
 
 /* le titre h2 directement enfant de header */
 
+
+/* TODO ?
 header>h2 {
     margin-top: 0.25em;
     font-size: 1.5em;
 }
+*/
 
 
 /* =-=-= Pour le contenu principal =-=-= */
