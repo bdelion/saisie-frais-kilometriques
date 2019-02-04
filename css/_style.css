@@ -165,19 +165,55 @@ main>article section {
     /* occupe la largeur restante */
     flex: 1;
     /* les articles sur fond blanc */
-    background-color: white;
+    /* background-color: white; */
     /* marge entre articles */
-    margin-bottom: 1em;
+    margin: 1em;
     /* marge intérieure */
     padding: 1em;
     /* bordure */
-    border: 2px solid #34495e;
+    /* border: 2px solid #34495e; */
     /* bordure arrondie */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* bordure avec ombre */
-    box-shadow: 10px 10px 5px 0px #656565;
+    /* box-shadow: 10px 10px 5px 0px #656565; */
     /* le contenu (l'image flottante entre autres) ne dépasse pas le contenant */
     overflow: auto;
+    /* on centre le contenu */
+    text-align: center;
+}
+
+main>article section img {
+    /* taille de l'image */
+    width: 80px;
+    /* marge intérieure */
+    padding: 5px;
+    /* bordure */
+    border: 2px solid #1d86e8;
+    /* bordure arrondie */
+    border-radius: 50%;
+    /* les articles sur fond blanc */
+    background-color: lightslategray;
+}
+
+main>article section .nav-selector {
+    /* marge extérieure négative pour que l'image couvre en partie */
+    margin: -1em;
+    /* marge intérieure */
+    padding: 1em;
+    /* bordure */
+    border: 2px solid #1d86e8;
+}
+
+main>article section .nav-selector h3 {
+    /* graisse de la police */
+    font-weight: bold;
+}
+
+main>article section .nav-selector p {
+    /* graisse de la police */
+    font-weight: lighter;
+    /* couleur de la police */
+    color: gray;
 }
 
 
