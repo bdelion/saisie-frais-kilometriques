@@ -148,12 +148,13 @@ main>article {
     padding: 1em;
     /* La section des articles est aussi en flex */
     display: flex;
+    justify-content: space-around;
     /* flex-grow = 0 : chaque enfant occupe la place nécessaire */
     /* flex-shrink = 1 : chaque enfant est rétrécit */
     /* flex-basis = auto :  taille par défaut d'un élément avant que l'espace restant soit réparti. */
-    flex: 0 1 auto;
+    /* flex: 0 1 auto; */
     /* disposition verticale : les articles les uns en dessous des autres */
-    flex-direction: row;
+    /* flex-direction: row; */
     /* éléments étirés dans l'espace disponible */
     align-items: stretch;
 }
@@ -182,17 +183,8 @@ main>article section {
     text-align: center;
 }
 
-main>article section img {
-    /* taille de l'image */
-    width: 80px;
-    /* marge intérieure */
-    padding: 5px;
-    /* bordure */
-    border: 2px solid #1d86e8;
-    /* bordure arrondie */
-    border-radius: 50%;
-    /* les articles sur fond blanc */
-    background-color: lightslategray;
+main>article section ::before {
+    background: url('../img/mountainbike-icon.png') blue no-repeat;
 }
 
 main>article section .nav-selector {
@@ -222,4 +214,10 @@ main>article section .nav-selector p {
 #contenu_principal>section article:last-child {
     /* marge entre articles */
     margin-bottom: 0em;
+}
+
+@media all and (max-width: 768px) {
+    main>article section .nav-selector p {
+        display: none;
+    }
 }
